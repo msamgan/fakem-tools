@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import MasterLayout from "../../layout/MasterLayout/MasterLayout";
 
 const Barcode = require('react-barcode');
+const crypto = require("crypto");
+
 
 const BarcodeGenerator = () => {
 
@@ -15,12 +17,16 @@ const BarcodeGenerator = () => {
                            className="form-label">Enter Barcode Value</label>
                     <input type="email" className="form-control w-50"
                            id="barcodeValue"
+                           value={inputValue}
                            onChange={event => {
                                setInputValue(event.target.value)
                            }}
                            aria-describedby="emailHelp"/>
                     <div id="" className="form-text mt-2">
                         <button type={'button'}
+                                onClick={() => {
+                                    setInputValue(crypto.randomBytes(10).toString('hex'));
+                                }}
                                 className={'btn btn-primary btn-sm'}>
                             Random Generate
                         </button>
