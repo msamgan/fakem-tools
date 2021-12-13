@@ -10,11 +10,13 @@ const JsonFormatter = () => {
     const [inputStringArray, setInputStringArray] = useState([])
 
     return <MasterLayout>
-        <div className={'row mt-5'}>
+        <h1 className={'mt-4'}># JSON Formatter</h1>
+        <p className={'text-muted'}>Format JSON String in a easily readable Object.</p>
+        <div className={'row mt-3'}>
             <div className={'col-md-12'}>
                 <label htmlFor="jsonValue"
                        className="form-label"><strong>Enter
-                    JSON</strong></label>
+                    JSON String</strong></label>
                 <textarea className="form-control"
                           rows={10}
                           id="jsonValue"

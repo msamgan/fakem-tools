@@ -18,12 +18,12 @@ const Nav = () => (
                  id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <Link className="nav-link active" to={'/'}
+                        <Link className="nav-link" to={'/'}
                               aria-current="page">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link"
-                           href="https://fakem.info">Generators</a>
+                        <Link className="nav-link"
+                              to={'/user'}>User</Link>
                     </li>
                 </ul>
             </div>

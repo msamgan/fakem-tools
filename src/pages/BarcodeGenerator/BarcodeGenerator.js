@@ -11,10 +11,14 @@ const BarcodeGenerator = () => {
 
     return (
         <MasterLayout>
-            <div className={'row mt-5'}>
+            <h1 className={'mt-4'}># Barcode Generator</h1>
+            <p className={'text-muted'}>Create barcode from ant text or generate
+                a random one.</p>
+            <div className={'row mt-3'}>
                 <div className="mb-3">
                     <label htmlFor="barcodeValue"
-                           className="form-label"><strong>Enter Value</strong></label>
+                           className="form-label"><strong>Enter
+                        Value</strong></label>
                     <input type="text" className="form-control w-50"
                            id="barcodeValue"
                            value={inputValue}

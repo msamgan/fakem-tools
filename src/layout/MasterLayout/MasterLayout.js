@@ -11,18 +11,15 @@ const MasterLayout = ({children}) => (
             </header>
 
             <div style={{
-                height: '81vh'
+                height: '85vh'
             }}>
                 {children}
             </div>
         </div>
 
-        <footer className="text-center text-lg-start bg-light text-muted"
-                style={{
-                    backgroundColor: '#252d47 !important'
-                }}>
-            <div className="text-center p-4 text-white"
-                /*style="background-color: rgba(0, 0, 0, 0.05);"*/>
+        <footer
+            className="text-center text-lg-start bg-light text-muted footer-bg">
+            <div className="text-center p-4 text-white">
                 © {new Date().getFullYear()} Copyright <a
                 className="text-reset fw-bold ml-2"
                 href="https://fakem.info/">fakem.info</a>
