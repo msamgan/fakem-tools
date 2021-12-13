@@ -26,9 +26,10 @@ const MasterLayout = ({children}) => (
                 className="text-reset fw-bold ml-2"
                 href="https://fakem.info/">fakem.info</a>
 
-                <p className={'mt-2'}><a
+                <p className={'mt-2'}>From the house of <a
+                    target="_blank"
                     className={'text-reset fw-bold ml-2'}
-                    href={'https://github/msamgan'}>msamgan</a> creation</p>
+                    href={'https://github/msamgan'}>msamgan</a></p>
             </div>
         </footer>
     </div>
