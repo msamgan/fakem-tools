@@ -43,6 +43,9 @@ const HomePage = () => {
             }, {
                 value: '/user',
                 label: 'Fake User Generator'
+            }, {
+                value: '/content',
+                label: 'Fake Content Generator'
             }]}
             onSelect={value => {
                 return history.push(value)

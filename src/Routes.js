@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import BarcodeGeneratorPage from "./pages/BarcodeGenerator/BarcodeGenerator";
 import JsonFormatterPage from "./pages/JsonFormatter/JsonFormatter";
 import UserGeneratorPage from "./pages/UserGenerator/UserGenerator";
+import ContentGeneratorPage from "./pages/ContentGenerator/ContentGenerator";
 
 
 const Routes = () => (
@@ -16,6 +17,8 @@ const Routes = () => (
                    component={JsonFormatterPage}/>
             <Route path="/user" exact
                    component={UserGeneratorPage}/>
+            <Route path="/content" exact
+                   component={ContentGeneratorPage}/>
         </Switch>
     </Router>
 );

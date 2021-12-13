@@ -59,7 +59,6 @@ const UserGenerator = () => {
                                     <td data-key={key.replace('_', ' ')}
                                         title="click to copy"
                                         onClick={event => {
-                                            console.log(event.target.innerHTML)
                                             window.navigator.clipboard.writeText(event.target.innerHTML.trim())
                                             notify.show(event.target.getAttribute('data-key') + ' copied..',
                                                 'success',
