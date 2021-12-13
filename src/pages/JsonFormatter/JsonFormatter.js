@@ -13,7 +13,8 @@ const JsonFormatter = () => {
         <div className={'row mt-5'}>
             <div className={'col-md-12'}>
                 <label htmlFor="jsonValue"
-                       className="form-label"><strong>Enter JSON</strong></label>
+                       className="form-label"><strong>Enter
+                    JSON</strong></label>
                 <textarea className="form-control"
                           rows={10}
                           id="jsonValue"
@@ -34,44 +35,35 @@ const JsonFormatter = () => {
                 </div>
             </div>
         </div>
-        {
-            inputString ?
-                <div className={'row mt-5'}>
-                    <div className={'col-md-12'}>
+        <div className={'row mt-5'}>
+            {
+                inputString ?
+                    <div className={'col-md-6'}>
                         <h3># Current</h3>
                         <pre>{inputString ?
                             < ReactJson src={inputString} name={false}
                                         collapsed={1}/> : null
                         }</pre>
                     </div>
-                </div>
-                : null
-        }
+                    : null
+            }
 
-        {
-            !isEmpty(inputStringArray) ?
-                <div>
-                    <hr/>
-                    <div className={'row mt-5'}>
-                        <div className={'col-md-12'}>
-                            <h3># History</h3>
-                            <pre>{!isEmpty(inputStringArray) ?
-                                inputStringArray.map(s =>
-                                    < ReactJson src={s} name={false}
-                                                collapsed={true}/>
-                                )
-                                : null
-                            }</pre>
-                        </div>
+            {
+                !isEmpty(inputStringArray) ?
+                    <div className={'col-md-6'}>
+                        <h3># History</h3>
+                        <pre>{!isEmpty(inputStringArray) ?
+                            inputStringArray.map(s =>
+                                < ReactJson src={s} name={false}
+                                            collapsed={true}/>
+                            )
+                            : null
+                        }</pre>
                     </div>
-                </div>
-                : null
-        }
+                    : null
+            }
+        </div>
     </MasterLayout>
 };
-
-JsonFormatter.propTypes = {};
-
-JsonFormatter.defaultProps = {};
 
 export default JsonFormatter;
