@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import MasterLayout from "../../layout/MasterLayout/MasterLayout";
 import {isEmpty} from "lodash";
+import {notify} from 'react-notify-toast';
 
 
 const UserGenerator = () => {
@@ -38,29 +39,43 @@ const UserGenerator = () => {
                 </button>
             </div>
             <div className={'col-md-10'}>
-                <a className={'btn btn-danger float-end'}>Jump to Inbox</a>
+                <a
+                    target="_blank"
+                    href={'https://www.dispostable.com/inbox/' + user['username'] + '/'}
+                    className={'btn btn-danger float-end'}>Jump to Inbox</a>
             </div>
         </div>
         <div className={'row mt-4'}>
             <div className={'col-md-12'}>
-                <table className="table table-bordered">
-                    <tbody>
-                    {!isEmpty(user) ?
-                        Object.keys(user).map((key, i) =>
-                            <tr>
-                                <td className="text-left w-25">
-                                    <strong>{key.replace('_', ' ')}</strong>
-                                </td>
-                                <td data-key="Gender" title="click to copy"
-                                    className="cursor-pointer copy text-left">
-                                    {user[key]}
-                                </td>
-                            </tr>
-                        )
-                        : <p>Getting a freshly baked user for you....</p>
-                    }
-                    </tbody>
-                </table>
+                {!isEmpty(user) ?
+                    <table className="table table-bordered">
+                        <tbody>
+                        {
+                            Object.keys(user).map((key, i) =>
+                                <tr key={i}>
+                                    <td className="text-left w-25">
+                                        <strong>{key.replace('_', ' ')}</strong>
+                                    </td>
+                                    <td data-key={key.replace('_', ' ')}
+                                        title="click to copy"
+                                        onClick={event => {
+                                            console.log(event.target.innerHTML)
+                                            window.navigator.clipboard.writeText(event.target.innerHTML.trim())
+                                            notify.show(event.target.getAttribute('data-key') + ' copied..',
+                                                'success',
+                                                700
+                                            );
+                                        }}
+                                        className="cursor-pointer copy text-left cursor-pointer copy">
+                                        {user[key]}
+                                    </td>
+                                </tr>
+                            )
+                        }
+                        </tbody>
+                    </table>
+                    : <p>Getting a freshly baked user for you....</p>
+                }
             </div>
         </div>
     </MasterLayout>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from "../../components/Nav/Nav";
+import Notifications from 'react-notify-toast';
 
 
 const MasterLayout = ({children}) => (
@@ -9,6 +10,7 @@ const MasterLayout = ({children}) => (
             <header>
                 <Nav/>
             </header>
+            <Notifications/>
 
             <div style={{
                 height: '85vh'

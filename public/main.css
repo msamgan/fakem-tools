@@ -1,3 +1,12 @@
 .footer-bg {
     background-color: #252d47 !important;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.copy:hover {
+    color: white;
+    background-color: #252d47 !important;
+}
