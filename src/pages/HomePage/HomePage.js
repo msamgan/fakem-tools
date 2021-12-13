@@ -2,6 +2,7 @@ import React from 'react';
 import MasterLayout from "../../layout/MasterLayout/MasterLayout";
 import Searchable from 'react-searchable-dropdown';
 import {useHistory} from 'react-router-dom'
+import menu from '../../components/Nav/menu.json'
 
 
 const HomePage = () => {
@@ -34,19 +35,7 @@ const HomePage = () => {
             value=""
             placeholder="Search for the tool"
             notFoundText="No result found"
-            options={[{
-                value: '/barcode-generator',
-                label: 'Barcode Generator'
-            }, {
-                value: '/json-formatter',
-                label: 'JSON Formatter'
-            }, {
-                value: '/user',
-                label: 'Fake User Generator'
-            }, {
-                value: '/content',
-                label: 'Fake Content Generator'
-            }]}
+            options={menu}
             onSelect={value => {
                 return history.push(value)
             }}

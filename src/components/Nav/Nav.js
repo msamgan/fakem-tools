@@ -1,9 +1,12 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+import Searchable from "react-searchable-dropdown";
+import menu from './menu.json'
 
+const Nav = () => {
+    let history = useHistory();
 
-const Nav = () => (
-    <nav className="navbar navbar-expand-lg navbar-light">
+    return <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
             <Link className="navbar-brand" to={'/'}>Fakem Tools</Link>
             <button className="navbar-toggler" type="button"
@@ -30,9 +33,21 @@ const Nav = () => (
                               to={'/content'}>Content</Link>
                     </li>
                 </ul>
+                <form className="d-flex">
+                    <Searchable
+                        value=""
+                        placeholder="Search for the tool"
+                        notFoundText="No result found"
+                        options={menu}
+                        onSelect={value => {
+                            return history.push(value)
+                        }}
+                        listMaxHeight={200}
+                    />
+                </form>
             </div>
         </div>
     </nav>
-);
+}
 
 export default Nav;

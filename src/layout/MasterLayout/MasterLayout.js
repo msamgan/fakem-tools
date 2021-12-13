@@ -25,6 +25,10 @@ const MasterLayout = ({children}) => (
                 © {new Date().getFullYear()} Copyright <a
                 className="text-reset fw-bold ml-2"
                 href="https://fakem.info/">fakem.info</a>
+
+                <p className={'mt-2'}><a
+                    className={'text-reset fw-bold ml-2'}
+                    href={'https://github/msamgan'}>msamgan</a> creation</p>
             </div>
         </footer>
     </div>

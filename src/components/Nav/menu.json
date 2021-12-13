@@ -1,0 +1,18 @@
+[
+    {
+        "value": "/barcode-generator",
+        "label": "Barcode Generator"
+    },
+    {
+        "value": "/user",
+        "label": "Fake User Generator"
+    },
+    {
+        "value": "/content",
+        "label": "Fake Content Generator"
+    },
+    {
+        "value": "/json-formatter",
+        "label": "JSON Formatter"
+    }
+]
