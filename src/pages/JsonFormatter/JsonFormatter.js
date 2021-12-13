@@ -11,7 +11,8 @@ const JsonFormatter = () => {
 
     return <MasterLayout>
         <h1 className={'mt-4'}># JSON Formatter</h1>
-        <p className={'text-muted'}>Format JSON String in a easily readable Object.</p>
+        <p className={'text-muted'}>Format JSON String in a easily readable
+            Object.</p>
         <div className={'row mt-3'}>
             <div className={'col-md-12'}>
                 <label htmlFor="jsonValue"
@@ -43,8 +44,8 @@ const JsonFormatter = () => {
                     <div className={'col-md-6'}>
                         <h3># Current</h3>
                         <pre>{inputString ?
-                            < ReactJson src={inputString} name={false}
-                                        collapsed={1}/> : null
+                            <ReactJson src={inputString} name={false}
+                                       collapsed={1}/> : null
                         }</pre>
                     </div>
                     : null

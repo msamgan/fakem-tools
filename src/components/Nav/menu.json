@@ -14,5 +14,9 @@
     {
         "value": "/json-formatter",
         "label": "JSON Formatter"
+    },
+    {
+        "value": "/api",
+        "label": "Test Api's"
     }
 ]
