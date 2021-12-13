@@ -14,6 +14,18 @@ const HomePage = () => {
             open source...
         </p>
 
+        <p>
+            Fakem is a open source fake user generator which is the most easy to use user generator
+            available out there.
+            <br />
+            It also provide you with ready to use temporary email inbox, available at just one click.
+            Generate names, addresses, about content etc, for absolute free of any charge.
+        </p>
+
+        <p>
+            Providing a number a tools for developers required in day to day development.
+        </p>
+        <h4 className={'mb-3'}>Search for required tool</h4>
         <Searchable
             value=""
             placeholder="Search for the tool"

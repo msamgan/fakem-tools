@@ -1,38 +1,33 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import Nav from "../../components/Nav/Nav";
 
 
 const MasterLayout = ({children}) => (
-    <div className={'container'}>
-        <header>
-            <nav className="navbar navbar-expand-lg navbar-light">
-                <div className="container-fluid">
-                    <Link className="navbar-brand" to={'/'}>Fakem Tools</Link>
-                    <button className="navbar-toggler" type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"/>
-                    </button>
-                    <div className="collapse navbar-collapse"
-                         id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <Link className="nav-link active" to={'/'}
-                                      aria-current="page">Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link"
-                                   href="https://fakem.info">Generators</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        {children}
+    <div>
+
+        <div className={'container'}>
+            <header>
+                <Nav/>
+            </header>
+
+            <div style={{
+                height: '81vh'
+            }}>
+                {children}
+            </div>
+        </div>
+
+        <footer className="text-center text-lg-start bg-light text-muted"
+                style={{
+                    backgroundColor: '#252d47 !important'
+                }}>
+            <div className="text-center p-4 text-white"
+                /*style="background-color: rgba(0, 0, 0, 0.05);"*/>
+                © {new Date().getFullYear()} Copyright <a
+                className="text-reset fw-bold ml-2"
+                href="https://fakem.info/">fakem.info</a>
+            </div>
+        </footer>
     </div>
 );
 

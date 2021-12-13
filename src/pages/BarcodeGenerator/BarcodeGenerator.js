@@ -18,6 +18,7 @@ const BarcodeGenerator = () => {
                     <input type="text" className="form-control w-50"
                            id="barcodeValue"
                            value={inputValue}
+                           autoFocus={true}
                            onChange={event => {
                                setInputValue(event.target.value)
                            }}
