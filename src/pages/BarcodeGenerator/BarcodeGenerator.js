@@ -14,7 +14,7 @@ const BarcodeGenerator = () => {
             <div className={'row mt-5'}>
                 <div className="mb-3">
                     <label htmlFor="barcodeValue"
-                           className="form-label">Enter Barcode Value</label>
+                           className="form-label"><strong>Enter Value</strong></label>
                     <input type="text" className="form-control w-50"
                            id="barcodeValue"
                            value={inputValue}

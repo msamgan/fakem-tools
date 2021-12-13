@@ -17,6 +17,7 @@ const JsonFormatter = () => {
                 <textarea className="form-control"
                           rows={10}
                           id="jsonValue"
+                          autoFocus={true}
                           onChange={event => {
                               setInputValue(event.target.value)
                           }}
