@@ -15,13 +15,13 @@ const BarcodeGenerator = () => {
                 <div className="mb-3">
                     <label htmlFor="barcodeValue"
                            className="form-label">Enter Barcode Value</label>
-                    <input type="email" className="form-control w-50"
+                    <input type="text" className="form-control w-50"
                            id="barcodeValue"
                            value={inputValue}
                            onChange={event => {
                                setInputValue(event.target.value)
                            }}
-                           aria-describedby="emailHelp"/>
+                           aria-describedby=""/>
                     <div id="" className="form-text mt-2">
                         <button type={'button'}
                                 onClick={() => {
@@ -35,7 +35,7 @@ const BarcodeGenerator = () => {
             </div>
             <div className={'row mt-5'}>
                 <div className={'col-md-12'}>
-                    <Barcode value={inputValue}/>,
+                    <Barcode value={inputValue}/>
                 </div>
             </div>
         </MasterLayout>
