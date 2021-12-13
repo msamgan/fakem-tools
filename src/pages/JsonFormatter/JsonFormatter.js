@@ -13,7 +13,7 @@ const JsonFormatter = () => {
         <div className={'row mt-5'}>
             <div className={'col-md-12'}>
                 <label htmlFor="jsonValue"
-                       className="form-label">Enter JSON</label>
+                       className="form-label"><strong>Enter JSON</strong></label>
                 <textarea className="form-control"
                           rows={10}
                           id="jsonValue"
@@ -40,7 +40,7 @@ const JsonFormatter = () => {
                         <h3># Current</h3>
                         <pre>{inputString ?
                             < ReactJson src={inputString} name={false}
-                                        collapsed={true}/> : null
+                                        collapsed={1}/> : null
                         }</pre>
                     </div>
                 </div>
