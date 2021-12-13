@@ -32,6 +32,10 @@ const Nav = () => {
                         <Link className="nav-link"
                               to={'/content'}>Content</Link>
                     </li>
+                    <li className="nav-item">
+                        <Link className="nav-link"
+                              to={'/api'}>Test Api's</Link>
+                    </li>
                 </ul>
                 <form className="d-flex">
                     <Searchable
