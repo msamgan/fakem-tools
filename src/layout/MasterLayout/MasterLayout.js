@@ -5,15 +5,14 @@ import Notifications from 'react-notify-toast';
 
 const MasterLayout = ({children}) => (
     <div>
-
-        <div className={'container mb-5'}>
-            <header>
+        <div className={''}>
+            <header className={'header'}>
                 <Nav/>
             </header>
             <Notifications/>
 
-            <div style={{
-                minHeight: '85vh'
+            <div className={''} style={{
+
             }}>
                 {children}
             </div>
