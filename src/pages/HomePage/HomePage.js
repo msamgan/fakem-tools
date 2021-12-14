@@ -64,13 +64,14 @@ const HomePage = () => {
                 <div className={'row'}>
                     {
                         menu.map(item =>
-                            <div className={'col-md-3 mt-5'}>
+                            <div className={'col-md-3 mt-4'}>
                                 <Link to={item.value}>
                                     <div className="card copy">
-                                        <img src={item.icon}
+                                        {/*<img src={item.icon}
                                              className="menu-icon mt-3"
-                                             alt={item.label}/>
-                                        <div className="card-body text-center">
+                                             alt={item.label}/>*/}
+                                        <div
+                                            className="card-body text-center mt-3">
                                             <h5 className="card-title">{item.label}</h5>
                                             <p className="card-text">{item.description}</p>
                                         </div>

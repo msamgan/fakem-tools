@@ -9,11 +9,14 @@ const Nav = () => {
 
     return <div className={'container'}>
         <nav className="navbar navbar-expand-lg navbar-light">
+            <img src={logo} alt={'fakem-log'} style={{
+                height: '38px'
+            }}/>
             <Link className="navbar-brand" to={'/'}>
-                <img src={logo} alt={'fakem-log'} style={{
-                    height: '28px'
-                }}/>
-                <span className={'text-muted'} style={{marginLeft: '10px'}}>Fakem Tools</span>
+                <span className={'text-muted'} style={{
+                    marginLeft: '10px',
+                    fontSize: '28px'
+                }}>Fakem Tools</span>
             </Link>
             <div className="container-fluid">
                 <button className="navbar-toggler" type="button"
@@ -26,11 +29,13 @@ const Nav = () => {
                 </button>
                 <div className="collapse navbar-collapse"
                      id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0" style={{
+                        marginRight: '72px'
+                    }}>
                         {/*<li className="nav-item">
                         <Link className="nav-link" to={'/'}
                               aria-current="page">Home</Link>
-                    </li>*/}
+                        </li>*/}
                         <li className="nav-item">
                             <Link className="nav-link"
                                   to={'/user'}>User</Link>
