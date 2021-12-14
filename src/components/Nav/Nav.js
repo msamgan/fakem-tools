@@ -2,13 +2,17 @@ import React from 'react';
 import {Link, useHistory} from "react-router-dom";
 import Searchable from "react-searchable-dropdown";
 import menu from './menu.json'
+import logo from '../../assets/logo-fakem.svg'
 
 const Nav = () => {
     let history = useHistory();
 
     return <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container-fluid">
-            <Link className="navbar-brand" to={'/'}>Fakem Tools</Link>
+            <Link className="navbar-brand" to={'/'}>
+                <img src={logo} alt={'fakem-log'}/>
+                <span className={'text-muted'}>Fakem Tools</span>
+            </Link>
             <button className="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
