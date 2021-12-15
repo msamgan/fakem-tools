@@ -6,6 +6,7 @@ import JsonFormatterPage from "./pages/JsonFormatter/JsonFormatter";
 import UserGeneratorPage from "./pages/UserGenerator/UserGenerator";
 import ContentGeneratorPage from "./pages/ContentGenerator/ContentGenerator";
 import TestApiPage from "./pages/TestApi/TestApi";
+import DiffCheckerPage from "./pages/DiffChecker/DiffChecker";
 
 
 const Routes = () => (
@@ -22,6 +23,8 @@ const Routes = () => (
                    component={ContentGeneratorPage}/>
             <Route path="/api" exact
                    component={TestApiPage}/>
+            <Route path="/diff-checker" exact
+                   component={DiffCheckerPage}/>
         </Switch>
     </Router>
 );

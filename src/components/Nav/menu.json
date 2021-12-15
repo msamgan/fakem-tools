@@ -6,6 +6,12 @@
         "icon": "barcode-reader"
     },
     {
+        "value": "/diff-checker",
+        "label": "Diff Checker",
+        "description": "Difference checker between two file data.",
+        "icon": "user-circle"
+    },
+    {
         "value": "/user",
         "label": "Fake User Generator",
         "description": "Detailed information of user for registrations",
