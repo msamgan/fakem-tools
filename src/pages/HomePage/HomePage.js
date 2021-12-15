@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MasterLayout from "../../layout/MasterLayout/MasterLayout";
 import Searchable from 'react-searchable-dropdown';
 import {Link, useHistory} from 'react-router-dom'
@@ -9,7 +9,6 @@ const HomePage = () => {
     let history = useHistory();
 
     return <MasterLayout>
-
         <div className={'container'}>
             <div className={'row mt-5'}>
                 <div className={'col-md-4'}>
@@ -67,11 +66,8 @@ const HomePage = () => {
                             <div className={'col-md-3 mt-4'}>
                                 <Link to={item.value}>
                                     <div className="card copy">
-                                        {/*<img src={item.icon}
-                                             className="menu-icon mt-3"
-                                             alt={item.label}/>*/}
                                         <div
-                                            className="card-body text-center mt-3">
+                                            className="card-body text-center">
                                             <h5 className="card-title">{item.label}</h5>
                                             <p className="card-text">{item.description}</p>
                                         </div>
