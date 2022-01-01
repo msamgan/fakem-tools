@@ -1,28 +1,27 @@
-import React from 'react';
-import Nav from "../../components/Nav/Nav";
-import Notifications from 'react-notify-toast';
-import Footer from "../../components/Footer/Footer";
+import React from "react"
+import Nav from "../../components/Nav/Nav"
+import Notifications from "react-notify-toast"
+import Footer from "../../components/Footer/Footer"
 
-
-const MasterLayout = ({children}) => (
+const MasterLayout = ({ children }) => (
     <div>
-        <div className={''}>
-            <header className={'header'}>
-                <Nav/>
+        <div className={""}>
+            <header className={"header"}>
+                <Nav />
             </header>
-            <Notifications/>
+            <Notifications />
 
-            <div className={''} style={{}}>
+            <div className={""} style={{}}>
                 {children}
             </div>
         </div>
 
-        <Footer/>
+        <Footer />
     </div>
-);
+)
 
-MasterLayout.propTypes = {};
+MasterLayout.propTypes = {}
 
-MasterLayout.defaultProps = {};
+MasterLayout.defaultProps = {}
 
-export default MasterLayout;
+export default MasterLayout

@@ -46,5 +46,11 @@
     },
     "bin": {
         "create-knight-react-app": "bin/installer.js"
+    },
+    "prettier": {
+        "trailingComma": "none",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": false
     }
 }
