@@ -7,6 +7,7 @@ import UserGeneratorPage from "./pages/UserGenerator/UserGenerator"
 import ContentGeneratorPage from "./pages/ContentGenerator/ContentGenerator"
 import TestApiPage from "./pages/TestApi/TestApi"
 import DiffCheckerPage from "./pages/DiffChecker/DiffChecker"
+import CharacterCounter from "./pages/CharacterCounter/CharacterCounter"
 
 const Routes = () => (
     <Router>
@@ -22,6 +23,11 @@ const Routes = () => (
             <Route path="/content" exact component={ContentGeneratorPage} />
             <Route path="/api" exact component={TestApiPage} />
             <Route path="/diff-checker" exact component={DiffCheckerPage} />
+            <Route
+                path="/character-counter"
+                exact
+                component={CharacterCounter}
+            />
         </Switch>
     </Router>
 )
