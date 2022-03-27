@@ -15,7 +15,12 @@ const CharacterCounter = () => {
         setWords(
             text ? text.split(" ").filter((word) => !isEmpty(word)).length : 0
         )
-        setSentences(text ? text.split(".").length - 1 : 0)
+        setSentences(
+            text
+                ? text.split(".").filter((sentence) => !isEmpty(sentence))
+                      .length - 1
+                : 0
+        )
         setParagraphs(
             text
                 ? text.split("\n").filter((paragraph) => !isEmpty(paragraph))
