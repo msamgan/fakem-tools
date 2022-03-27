@@ -2,38 +2,36 @@
     {
         "value": "/barcode-generator",
         "label": "Barcode Generator",
-        "description": "Create barcode from ant text or generate a random one.",
-        "icon": "barcode-reader"
+        "description": "Create barcode from ant text or generate a random one."
     },
     {
         "value": "/diff-checker",
         "label": "Diff Checker",
-        "description": "Difference checker between two file data.",
-        "icon": "user-circle"
+        "description": "Difference checker between two file data."
     },
     {
         "value": "/user",
         "label": "Fake User Generator",
-        "description": "Detailed information of user for registrations",
-        "icon": "user-circle"
+        "description": "Detailed information of user for registrations"
     },
     {
         "value": "/content",
         "label": "Fake Content Generator",
-        "description": "Random generated content for and as per your requirement.",
-        "icon": "book-content"
+        "description": "Random generated content for and as per your requirement."
     },
     {
         "value": "/json-formatter",
         "label": "JSON Formatter",
-        "description": "Format JSON String in a easily readable Object.",
-        "icon": "file-json",
-        "iconType": "solid"
+        "description": "Format JSON String in a easily readable Object."
     },
     {
         "value": "/api",
         "label": "Test Api's",
-        "description": "Api Endpoints to test your setup. directly get the data for test",
-        "icon": "plug"
+        "description": "Api Endpoints to test your setup. directly get the data for test"
+    },
+    {
+        "value": "/character-counter",
+        "label": "Character Counter",
+        "description": "Count the number of characters in a string."
     }
 ]
