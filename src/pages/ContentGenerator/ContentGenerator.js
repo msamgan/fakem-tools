@@ -7,7 +7,7 @@ const ContentGenerator = () => {
     const [generateNewDisable, setGenerateNewDisable] = useState(false)
 
     /**
-     *
+     * Gets random content from the API.
      * @returns {Promise<void>}
      */
     const getRandomContent = async () => {
@@ -16,10 +16,18 @@ const ContentGenerator = () => {
             .then((data) => setContent(data))
     }
 
+    /**
+     * A function that runs when the component mounts.
+     * @returns None
+     */
     useEffect(async () => {
         await getRandomContent()
     }, [])
 
+    /**
+     * The main content of the page.       
+     * @returns {JSX.Element} A JSX element.       
+     */
     return (
         <MasterLayout>
             <div className={"container mb-3 mt-5 min-height"}>

@@ -3,6 +3,10 @@ import React from "react"
 import { useState, useEffect } from "react"
 import MasterLayout from "../../layout/MasterLayout/MasterLayout"
 
+/**
+ * A React component that displays the character counter.       
+ * @returns None       
+ */
 const CharacterCounter = () => {
     const [text, setText] = useState(null)
     const [characters, setCharacters] = useState(0)
@@ -10,6 +14,12 @@ const CharacterCounter = () => {
     const [sentences, setSentences] = useState(0)
     const [paragraphs, setParagraphs] = useState(0)
 
+    /**
+     * Sets the state of the character, word, sentence, and paragraph counts.           
+     * @param {string} text - the text to count the characters, words, sentences, and           
+     * paragraphs of.           
+     * @returns None           
+     */
     useEffect(() => {
         setCharacters(text ? text.length : 0)
         setWords(
@@ -29,6 +39,10 @@ const CharacterCounter = () => {
         )
     }, [text])
 
+    /**
+     * The main component for the character counter.           
+     * @returns {JSX.Element} A React component that displays the character counter.           
+     */
     return (
         <MasterLayout>
             <div className={"container mb-3 mt-5 min-height"}>

@@ -5147,6 +5147,11 @@ file-loader@6.1.1:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"
 
+file-saver@^2.0.0-rc.3:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
+  integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
+
 file-uri-to-path@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz#553a7b8446ff6f684359c445f1e37a05dacc33dd"
@@ -6048,6 +6053,11 @@ inquirer@^8.1.2:
     string-width "^4.1.0"
     strip-ansi "^6.0.0"
     through "^2.3.6"
+
+install@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/install/-/install-0.13.0.tgz#6af6e9da9dd0987de2ab420f78e60d9c17260776"
+  integrity sha512-zDml/jzr2PKU9I8J/xyZBQn8rPCAY//UOYNmR01XwNwyfhEWObo2SWfSl1+0tm1u6PhxLwDnfsT/6jB7OUxqFA==
 
 internal-ip@^4.3.0:
   version "4.3.0"
@@ -9468,6 +9478,20 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
+react-json-excel@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-json-excel/-/react-json-excel-1.1.0.tgz#af9d67ebd945527dc05ab4bb0f1e336cc07ebcb4"
+  integrity sha512-HH4nhyzOuUPfknmOnpc3rgzEQvmGOuxcrdExZIE3D1tPPAjhPqijobB2gOdpg+I8YMp4NT3SzWbsTApshxesIg==
+  dependencies:
+    file-saver "^2.0.0-rc.3"
+    prop-types "^15.6.2"
+    react "^16.5.2"
+
+react-json-to-excel@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-json-to-excel/-/react-json-to-excel-1.0.4.tgz#9216a4f20042e8b399e24d59e7e4dd2c68304499"
+  integrity sha512-nryIPIpoxzh6FqmJ5xZ6a6Xp3sJOoPtSl7o68ZtqJSUDnks3Qb4g+fvCMJHLF3xwxscoJMGex3eFeV4wQGQgbw==
+
 react-json-view@^1.21.3:
   version "1.21.3"
   resolved "https://registry.yarnpkg.com/react-json-view/-/react-json-view-1.21.3.tgz#f184209ee8f1bf374fb0c41b0813cff54549c475"
@@ -9608,7 +9632,7 @@ react-textarea-autosize@^8.3.2:
     use-composed-ref "^1.0.0"
     use-latest "^1.0.0"
 
-react@^16.8.6:
+react@^16.5.2, react@^16.8.6:
   version "16.14.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
   integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==

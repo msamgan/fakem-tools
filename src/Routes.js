@@ -8,6 +8,7 @@ import ContentGeneratorPage from "./pages/ContentGenerator/ContentGenerator"
 import TestApiPage from "./pages/TestApi/TestApi"
 import DiffCheckerPage from "./pages/DiffChecker/DiffChecker"
 import CharacterCounter from "./pages/CharacterCounter/CharacterCounter"
+import JsonToExcel from "./pages/JsonToExcelPage/JsonToExcelPage"
 
 const Routes = () => (
     <Router>
@@ -28,6 +29,7 @@ const Routes = () => (
                 exact
                 component={CharacterCounter}
             />
+            <Route path="/json-to-excel" exact component={JsonToExcel} />
         </Switch>
     </Router>
 )
