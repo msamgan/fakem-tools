@@ -21,7 +21,11 @@ const JsonToExcelPage = () => {
                             className={"form-control"}
                             id={"inputText"}
                             onChange={(e) => {
-                                setData(JSON.parse(e.target.value))
+                                if (e.target.value.length > 0) {
+                                    setData(JSON.parse(e.target.value))
+                                } else {
+                                    setData([])
+                                }
                             }}
                             rows={10}
                             placeholder={
@@ -32,12 +36,14 @@ const JsonToExcelPage = () => {
                 </div>
                 <div className={"row mt-3"}>
                     <div className={"col-md-12"}>
-                        <JsonToExcel
-                            title="Download as Excel"
-                            data={data}
-                            fileName="sample-file"
-                            btnClassName="custom-classname"
-                        />
+                        {data.length > 0 && (
+                            <JsonToExcel
+                                title="Download as Excel"
+                                data={data}
+                                fileName="sample-file"
+                                btnClassName="custom-classname"
+                            />
+                        )}
                     </div>
                 </div>
             </div>
