@@ -9,6 +9,7 @@ import TestApiPage from "./pages/TestApi/TestApi"
 import DiffCheckerPage from "./pages/DiffChecker/DiffChecker"
 import CharacterCounter from "./pages/CharacterCounter/CharacterCounter"
 import JsonToExcel from "./pages/JsonToExcelPage/JsonToExcelPage"
+import HtmlToMarkdown from "./pages/HtmlToMarkdown/HtmlToMarkdown"
 
 const Routes = () => (
     <Router>
@@ -30,6 +31,7 @@ const Routes = () => (
                 component={CharacterCounter}
             />
             <Route path="/json-to-excel" exact component={JsonToExcel} />
+            <Route path="/html-to-markdown" exact component={HtmlToMarkdown} />
         </Switch>
     </Router>
 )
