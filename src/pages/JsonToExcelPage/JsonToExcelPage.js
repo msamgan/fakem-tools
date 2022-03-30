@@ -5,6 +5,7 @@ import { JsonToExcel } from "react-json-to-excel"
 const JsonToExcelPage = () => {
     const [data, setData] = useState([])
     const [error, setError] = useState(null)
+    const [fetching, setFetching] = useState(null)
 
     const isValidJson = (str) => {
         try {
@@ -32,6 +33,8 @@ const JsonToExcelPage = () => {
                             className={"form-control"}
                             id={"inputText"}
                             onChange={(e) => {
+                                setError(null)
+                                setData([])
                                 if (
                                     e.target.value.length > 0 &&
                                     isValidJson(e.target.value)
@@ -52,10 +55,44 @@ const JsonToExcelPage = () => {
                                 "[{ name: 'name', age: 20, gender: 'M' }]"
                             }
                         />
+                        <hr></hr>
+                        <label htmlFor="inputUrl" className="form-label">
+                            <strong>Input Json URL</strong>
+                        </label>
+                        <input
+                            className={"form-control"}
+                            disabled={fetching?.length > 0 ? true : false}
+                            id={"inputUrl"}
+                            placeholder={
+                                "https://api.fakem.info/api/users?count=10"
+                            }
+                            onChange={(e) => {
+                                setError(null)
+                                setData([])
+                                if (e.target.value.length > 0) {
+                                    setError(null)
+                                    setFetching("fetching....")
+                                    fetch(e.target.value)
+                                        .then((res) => res.json())
+                                        .then((data) => {
+                                            setFetching(null)
+                                            setData(data)
+                                        })
+                                        .catch((err) => {
+                                            setError(
+                                                err?.message ||
+                                                    "Something went wrong"
+                                            )
+                                            setData([])
+                                        })
+                                }
+                            }}
+                        />
                     </div>
                 </div>
                 <div className={"row mt-3"}>
                     <div className={"col-md-12"}>
+                        {fetching}
                         {data.length > 0 && (
                             <JsonToExcel
                                 title="Download as Excel"
@@ -63,6 +100,15 @@ const JsonToExcelPage = () => {
                                 fileName="sample-file"
                                 btnClassName="custom-classname"
                             />
+                        )}
+                        {data.length > 0 && (
+                            <strong
+                                style={{
+                                    marginTop: "20px"
+                                }}
+                            >
+                                Total Rows : {data.length}
+                            </strong>
                         )}
                         <p className="text-danger">{error}</p>
                     </div>
