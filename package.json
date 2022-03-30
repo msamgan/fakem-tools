@@ -7,11 +7,14 @@
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
         "generate-react-cli": "^7.0.4",
+        "install": "^0.13.0",
         "lodash": "^4.17.21",
         "react": "^17.0.2",
         "react-barcode": "^1.4.1",
         "react-diff-viewer": "^3.1.1",
         "react-dom": "^17.0.2",
+        "react-json-excel": "^1.1.0",
+        "react-json-to-excel": "^1.0.4",
         "react-json-view": "^1.21.3",
         "react-notify-toast": "^0.5.1",
         "react-router": "^5.2.1",
@@ -43,9 +46,6 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    },
-    "bin": {
-        "create-knight-react-app": "bin/installer.js"
     },
     "prettier": {
         "trailingComma": "none",

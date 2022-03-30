@@ -33,5 +33,10 @@
         "value": "/character-counter",
         "label": "Character Counter",
         "description": "Count the number of characters in a string."
+    },
+    {
+        "value": "/json-to-excel",
+        "label": "JSON to Excel Downloader",
+        "description": "Download JSON data as excel file from a url or JSON string."
     }
 ]
