@@ -38,5 +38,10 @@
         "value": "/json-to-excel",
         "label": "JSON to Excel Downloader",
         "description": "Download JSON data as excel file from a url or JSON string."
+    },
+    {
+        "value": "/html-to-markdown",
+        "label": "HTML to Markdown Converter",
+        "description": "Convert HTML to Markdown for easy reading."
     }
 ]
