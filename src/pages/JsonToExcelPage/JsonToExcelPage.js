@@ -4,6 +4,17 @@ import { JsonToExcel } from "react-json-to-excel"
 
 const JsonToExcelPage = () => {
     const [data, setData] = useState([])
+    const [error, setError] = useState(null)
+
+    const isValidJson = (str) => {
+        try {
+            JSON.parse(str)
+        } catch (e) {
+            return false
+        }
+
+        return true
+    }
 
     return (
         <MasterLayout>
@@ -21,9 +32,18 @@ const JsonToExcelPage = () => {
                             className={"form-control"}
                             id={"inputText"}
                             onChange={(e) => {
-                                if (e.target.value.length > 0) {
+                                if (
+                                    e.target.value.length > 0 &&
+                                    isValidJson(e.target.value)
+                                ) {
+                                    setError(null)
                                     setData(JSON.parse(e.target.value))
                                 } else {
+                                    e.target.value.length > 0
+                                        ? setError(
+                                              "The input is not valid JSON"
+                                          )
+                                        : setError(null)
                                     setData([])
                                 }
                             }}
@@ -44,6 +64,7 @@ const JsonToExcelPage = () => {
                                 btnClassName="custom-classname"
                             />
                         )}
+                        <p className="text-danger">{error}</p>
                     </div>
                 </div>
             </div>
