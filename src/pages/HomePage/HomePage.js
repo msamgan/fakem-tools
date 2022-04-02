@@ -2,10 +2,11 @@ import React from "react"
 import MasterLayout from "../../layout/MasterLayout/MasterLayout"
 import Searchable from "react-searchable-dropdown"
 import { Link, useHistory } from "react-router-dom"
-import menu from "../../components/Nav/menu.json"
+import { getMenu } from "../../utils/methods"
 
 const HomePage = () => {
     let history = useHistory()
+    const sortedMenu = getMenu()
 
     return (
         <MasterLayout>
@@ -44,7 +45,7 @@ const HomePage = () => {
                         value=""
                         placeholder="Search for the tool"
                         notFoundText="No result found"
-                        options={menu}
+                        options={sortedMenu}
                         onSelect={(value) => {
                             return history.push(value)
                         }}
@@ -52,7 +53,7 @@ const HomePage = () => {
                     />
 
                     <div className={"row"}>
-                        {menu.map((item, i) => (
+                        {sortedMenu.map((item, i) => (
                             <div key={i} className={"col-md-3 mt-4"}>
                                 <Link to={item.value}>
                                     <div className="card copy">
@@ -74,8 +75,5 @@ const HomePage = () => {
         </MasterLayout>
     )
 }
-HomePage.propTypes = {}
-
-HomePage.defaultProps = {}
 
 export default HomePage

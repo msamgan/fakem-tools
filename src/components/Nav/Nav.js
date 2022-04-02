@@ -1,11 +1,12 @@
 import React from "react"
 import { Link, useHistory } from "react-router-dom"
 import Searchable from "react-searchable-dropdown"
-import menu from "./menu.json"
 import logo from "../../assets/logo-fakem.svg"
+import { getMenu } from "../../utils/methods"
 
 const Nav = () => {
     let history = useHistory()
+    const sortedMenu = getMenu()
 
     return (
         <div className={"container"}>
@@ -75,7 +76,7 @@ const Nav = () => {
                                 value=""
                                 placeholder="Search for the tool"
                                 notFoundText="No result found"
-                                options={menu}
+                                options={sortedMenu}
                                 onSelect={(value) => {
                                     return history.push(value)
                                 }}
