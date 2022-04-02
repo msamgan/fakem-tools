@@ -43,5 +43,10 @@
         "value": "/html-to-markdown",
         "label": "HTML to Markdown Converter",
         "description": "Convert HTML to Markdown for easy reading."
+    },
+    {
+        "value": "/markdown-to-html",
+        "label": "Markdown to HTML Converter",
+        "description": "Convert Markdown to HTML  for easy reading."
     }
 ]

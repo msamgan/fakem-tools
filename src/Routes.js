@@ -10,6 +10,7 @@ import DiffCheckerPage from "./pages/DiffChecker/DiffChecker"
 import CharacterCounter from "./pages/CharacterCounter/CharacterCounter"
 import JsonToExcel from "./pages/JsonToExcelPage/JsonToExcelPage"
 import HtmlToMarkdown from "./pages/HtmlToMarkdown/HtmlToMarkdown"
+import MarkdownToHtml from "./pages/MarkdownToHtml/MarkdownToHtml"
 
 /**
  * A React component that renders the routes for the application.
@@ -66,6 +67,11 @@ const Routes = () => {
             path: "/html-to-markdown",
             exact: true,
             component: HtmlToMarkdown
+        },
+        {
+            path: "/markdown-to-html",
+            exact: true,
+            component: MarkdownToHtml
         }
     ]
 
