@@ -11,29 +11,78 @@ import CharacterCounter from "./pages/CharacterCounter/CharacterCounter"
 import JsonToExcel from "./pages/JsonToExcelPage/JsonToExcelPage"
 import HtmlToMarkdown from "./pages/HtmlToMarkdown/HtmlToMarkdown"
 
-const Routes = () => (
-    <Router>
-        <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route
-                path="/barcode-generator"
-                exact
-                component={BarcodeGeneratorPage}
-            />
-            <Route path="/json-formatter" exact component={JsonFormatterPage} />
-            <Route path="/user" exact component={UserGeneratorPage} />
-            <Route path="/content" exact component={ContentGeneratorPage} />
-            <Route path="/api" exact component={TestApiPage} />
-            <Route path="/diff-checker" exact component={DiffCheckerPage} />
-            <Route
-                path="/character-counter"
-                exact
-                component={CharacterCounter}
-            />
-            <Route path="/json-to-excel" exact component={JsonToExcel} />
-            <Route path="/html-to-markdown" exact component={HtmlToMarkdown} />
-        </Switch>
-    </Router>
-)
+/**
+ * A React component that renders the routes for the application.
+ * @returns JSX<Routes>
+ */
+const Routes = () => {
+    const routes = [
+        {
+            path: "/",
+            exact: true,
+            component: HomePage
+        },
+        {
+            path: "/barcode-generator",
+            exact: true,
+            component: BarcodeGeneratorPage
+        },
+        {
+            path: "/json-formatter",
+            exact: true,
+            component: JsonFormatterPage
+        },
+        {
+            path: "/user",
+            exact: true,
+            component: UserGeneratorPage
+        },
+        {
+            path: "/content",
+            exact: true,
+            component: ContentGeneratorPage
+        },
+        {
+            path: "/api",
+            exact: true,
+            component: TestApiPage
+        },
+        {
+            path: "/diff-checker",
+            exact: true,
+            component: DiffCheckerPage
+        },
+        {
+            path: "/character-counter",
+            exact: true,
+            component: CharacterCounter
+        },
+        {
+            path: "/json-to-excel",
+            exact: true,
+            component: JsonToExcel
+        },
+        {
+            path: "/html-to-markdown",
+            exact: true,
+            component: HtmlToMarkdown
+        }
+    ]
+
+    return (
+        <Router>
+            <Switch>
+                {routes.map((route, index) => (
+                    <Route
+                        key={index}
+                        path={route.path}
+                        exact={route.exact}
+                        component={route.component}
+                    />
+                ))}
+            </Switch>
+        </Router>
+    )
+}
 
 export default Routes
