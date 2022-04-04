@@ -11,6 +11,7 @@ import CharacterCounter from "./pages/CharacterCounter/CharacterCounter"
 import JsonToExcel from "./pages/JsonToExcelPage/JsonToExcelPage"
 import HtmlToMarkdown from "./pages/HtmlToMarkdown/HtmlToMarkdown"
 import MarkdownToHtml from "./pages/MarkdownToHtml/MarkdownToHtml"
+import GitIgnoreGenerator from "./pages/GitIgnoreGenerator/GitIgnoreGenerator"
 
 /**
  * A React component that renders the routes for the application.
@@ -72,6 +73,11 @@ const Routes = () => {
             path: "/markdown-to-html",
             exact: true,
             component: MarkdownToHtml
+        },
+        {
+            path: "/gitignore-generator",
+            exact: true,
+            component: GitIgnoreGenerator
         }
     ]
 
