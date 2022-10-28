@@ -1,8 +1,8 @@
 import menu from "../components/Nav/menu.json"
 
 /**
- * Returns a sorted array of menu items.           
- * @returns {Array<MenuItem>}           
+ * Returns a sorted array of menu items.
+ * @returns {Array<MenuItem>}
  */
 export const getMenu = () => {
     return menu.sort((a, b) => {
@@ -14,4 +14,13 @@ export const getMenu = () => {
         }
         return 0
     })
+}
+
+/**
+ * Updates the title of the page to include the given title.       
+ * @param {string} title - the title to add to the page title       
+ * @returns {string} The updated page title.       
+ */
+export const updateTitle = (title) => {
+    return title + " | Fakem"
 }
