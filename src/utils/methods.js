@@ -17,9 +17,9 @@ export const getMenu = () => {
 }
 
 /**
- * Updates the title of the page to the given title.
- * @param {string} title - the title to set the page to.
- * @returns None
+ * Updates the title of the page to include the given title.       
+ * @param {string} title - the title to add to the page title       
+ * @returns {string} The updated page title.       
  */
 export const updateTitle = (title) => {
     return title + " | Fakem"
