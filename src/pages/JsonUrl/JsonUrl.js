@@ -54,7 +54,7 @@ const JsonUrl = () => {
                 <div className={"container mb-3 mt-5 min-height"}>
                     <h1 className={"mt-4"}># Json url</h1>
                     <p className={"text-muted"}>
-                        Convert JSON to URL. you can use this tool to convert
+                        Convert JSON to URL. You can use this tool to convert
                         you json to url.
                     </p>
                     <div className={"row mt-3"}>
