@@ -11,6 +11,7 @@ import CharacterCounter from "./pages/CharacterCounter/CharacterCounter"
 import JsonToExcel from "./pages/JsonToExcelPage/JsonToExcelPage"
 import HtmlToMarkdown from "./pages/HtmlToMarkdown/HtmlToMarkdown"
 import MarkdownToHtml from "./pages/MarkdownToHtml/MarkdownToHtml"
+import JsonUrl from "./pages/JsonUrl/JsonUrl"
 
 /**
  * A React component that renders the routes for the application.
@@ -72,6 +73,11 @@ const Routes = () => {
             path: "/markdown-to-html",
             exact: true,
             component: MarkdownToHtml
+        },
+        {
+            path: "/json-url",
+            exact: true,
+            component: JsonUrl
         }
     ]
 
