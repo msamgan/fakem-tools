@@ -48,5 +48,10 @@
         "value": "/markdown-to-html",
         "label": "Markdown to HTML Converter",
         "description": "Convert Markdown to HTML  for easy reading."
+    },
+    {
+        "value": "/json-url",
+        "label": "Json url",
+        "description": "Get the your custom json data from a url."
     }
 ]

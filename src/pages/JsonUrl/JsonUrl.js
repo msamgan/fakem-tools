@@ -87,6 +87,7 @@ const JsonUrl = () => {
                                 }}
                                 onClick={() => {
                                     setError("")
+                                    setUrl("")
                                     setDisableSave(true)
                                     try {
                                         let parseJSON = JSON.parse(input)
