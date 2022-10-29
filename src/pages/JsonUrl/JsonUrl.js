@@ -2,27 +2,38 @@ import React, { useState } from "react"
 import DocumentMeta from "react-document-meta"
 import MasterLayout from "../../layout/MasterLayout/MasterLayout"
 import { updateTitle } from "../../utils/methods"
+import axios from "axios"
+import { notify } from "react-notify-toast"
 
 const JsonUrl = () => {
     const [input, setInput] = useState("")
     const [error, setError] = useState("")
     const [disableSave, setDisableSave] = useState(true)
+    const [url, setUrl] = useState("")
 
     /**
      *
      * @returns {Promise<void>}
      */
     const postJson = async () => {
-        await fetch(process.env.REACT_APP_API + "json-url", {
-            method: "POST",
+        let config = {
+            method: "post",
+            url: process.env.REACT_APP_API + "json-url",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(input)
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data)
+            data: input
+        }
+
+        axios(config)
+            .then(function (response) {
+                let jsonUrl =
+                    process.env.REACT_APP_API + "json-url/" + response.data.uuid
+
+                setUrl(jsonUrl)
+            })
+            .catch(function (error) {
+                console.log(error)
             })
     }
 
@@ -115,7 +126,43 @@ const JsonUrl = () => {
                                     fontSize: "16px"
                                 }}
                             >
-                                <span className="error">{error}</span>
+                                <span
+                                    className="error"
+                                    style={{
+                                        float: "left"
+                                    }}
+                                >
+                                    {error}
+                                </span>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className={"row mt-3"}>
+                        {url !== "" && (
+                            <div
+                                title="Click to copy"
+                                className={"col-md-12 badge badge-success"}
+                                onClick={() => {
+                                    navigator.clipboard.writeText(url)
+                                    notify.show(" copied..", "success", 700)
+                                }}
+                                style={{
+                                    background: "#d5d0d0",
+                                    color: "black",
+                                    padding: "10px",
+                                    fontSize: "16px",
+                                    cursor: "pointer"
+                                }}
+                            >
+                                <span
+                                    className=""
+                                    style={{
+                                        float: "left"
+                                    }}
+                                >
+                                    {url}
+                                </span>
                             </div>
                         )}
                     </div>
