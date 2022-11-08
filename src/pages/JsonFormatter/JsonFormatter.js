@@ -1,9 +1,9 @@
 import React, { useState } from "react"
 import MasterLayout from "../../layout/MasterLayout/MasterLayout"
 import ReactJson from "react-json-view"
-import { isEmpty } from "lodash"
 import { updateTitle } from "../../utils/methods"
 import DocumentMeta from "react-document-meta"
+import { isObject } from "lodash"
 
 const JsonFormatter = () => {
     const [inputValue, setInputValue] = useState()
@@ -66,21 +66,33 @@ const JsonFormatter = () => {
                     </div>
                     <div className={"row mt-5"}>
                         {inputString ? (
-                            <div className={"col-md-6"}>
+                            <div className={"col-md-12"}>
                                 <h3># Current</h3>
                                 <pre>
                                     {inputString ? (
                                         <ReactJson
                                             src={inputString}
                                             name={false}
-                                            collapsed={1}
+                                            collapsed={false}
+                                            enableClipboard={(copy) => {
+                                                if (isObject(copy.src)) {
+                                                    return navigator.clipboard.writeText(
+                                                        JSON.stringify(copy.src)
+                                                    )
+                                                }
+
+                                                return navigator.clipboard.writeText(
+                                                    copy.src
+                                                )
+                                            }}
+                                            displayDataTypes={true}
                                         />
                                     ) : null}
                                 </pre>
                             </div>
                         ) : null}
 
-                        {!isEmpty(inputStringArray) ? (
+                        {/* {!isEmpty(inputStringArray) ? (
                             <div className={"col-md-6"}>
                                 <h3># History</h3>
                                 <pre>
@@ -96,7 +108,7 @@ const JsonFormatter = () => {
                                         : null}
                                 </pre>
                             </div>
-                        ) : null}
+                        ) : null} */}
                     </div>
                 </div>
             </DocumentMeta>
